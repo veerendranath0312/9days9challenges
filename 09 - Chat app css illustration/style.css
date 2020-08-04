@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+:root {
+    /* (sub-heading at the top of the app UI) */
+    --Pale-Violet : hsl(276, 100%, 81%);
+
+    /* (chat on the left) */
+    --Moderate-Violet:  hsl(276, 55%, 52%);
+
+    /* (chat on the right) */
+    --Desaturated-Dark-Violet : hsl(271, 15%, 43%);
+
+    /* (placeholder text) */
+    --Grayish-Blue : hsl(206, 6%, 79%);
+
+    /* (main heading) */
+    --Very-Dark-Desaturated-Violet:  hsl(271, 36%, 24%);
+
+    /* (paragraph) */
+    --Dark-Grayish-Violet : hsl(270, 7%, 64%);
+
+    /* Gradients */
+    --Light-Magenta: hsl(293, 100%, 63%);
+    --Light-Violet: hsl(264, 100%, 61%);
+
+
+    
+    --White: hsl(0, 0%, 100%);
+
+    /* (app background) */
+    --Light-Grayish-Violet: hsl(270, 20%, 96%);
+
+    /* (submit button background) */
+    --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+
+    /* (radio button outline) */
+    --Very-Light-Magenta: hsl(289, 100%, 72%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--Light-Grayish-Violet);
+    padding: 60px 0;
+}
+
+body::before,
+body::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 600px;
+    z-index: -1;
+}
+
+body::before {
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg,var(--Light-Violet), var(--Light-Magenta) );
+    border-bottom-right-radius: 500px;
+    /* border-bottom-left-radius: 200px; */
+}
+
+body::after {
+    bottom: 0;
+    right: 0;
+    background: hsl(300, 3%, 93%);
+    /* border-top-right-radius: 200px; */
+    border-top-left-radius: 500px;
+}
+
+.mobile {
+    width: 300px;
+    background: var(--Light-Grayish-Violet);
+    border: 10px solid white;
+    border-radius: 30px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.07);
+    position: relative;
+    
+}
+
+.mobile::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20%;
+    width: 60%;
+    height: 25px;
+    background: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}
+
+/* Header */
+
+.header {
+    width: 100%;
+    /* height: 60px; */
+    background: linear-gradient(45deg,var(--Light-Violet), var(--Light-Magenta) );
+    border-radius: 20px 20px 5px 5px;
+    padding: 40px 20px 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .name {
+    display: flex;
+    align-items: center;
+}
+
+.fa-angle-left {
+    color: var(--White);
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.header .name img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-right: 8px;
+}
+
+.header .name .my-name h5 {
+    color: var(--White);
+}
+
+.header .name .my-name p {
+    font-size: 10px;
+    color: var(--Pale-Violet);
+}
+
+.menu  {
+    width: 3px;
+    height: 3px;
+    background: var(--White);
+    position: relative;
+    cursor: pointer;
+}
+
+.menu::before,
+.menu::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: var(--White);
+    top: -6px;
+}
+
+.menu::after {
+    top: 6px;
+}
+
+/* Chat Box */
+.chat-box {
+    padding: 10px;
+}
+
+.chat-box .left {
+    clear: both;
+    background: hsl(273, 100%, 94%);
+    padding: 10px;
+    font-size: 10px;
+    max-width: 165px;
+    border-radius: 15px 15px 15px 5px;
+    margin-bottom: 8px;
+    color: var(--Moderate-Violet);
+    line-height: 15px;
+}
+
+.chat-box .images {
+    display: flex;
+    float: right;
+}
+
+.chat-box .images img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 5px 0 10px 0;
+}
+
+.chat-box .images img:not(:last-child) {
+    margin-right: 7px;
+}
+
+.chat-box .right {
+    clear: both;
+    float: right;
+    color: var(--Desaturated-Dark-Violet);
+    background: var(--White);
+    padding: 10px;
+    max-width: 165px;
+    font-size: 10px;
+    border-radius: 15px 15px 5px 15px;
+    line-height: 15px;
+    margin-bottom: 8px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.07);
+}
+
+.spl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, var(--Light-Magenta), var(--Light-Violet));
+    padding: 10px 15px 10px 10px;
+    font-size: 12px;
+    max-width: 200px;
+    border-radius: 15px 15px 15px 5px;
+    margin-bottom: 8px;
+    color: var(--White);
+    line-height: 15px;
+}
+
+.spl .time {
+    display: flex;
+}
+
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    border: 1px solid var(--Very-Light-Magenta);
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+.spl .time p {
+    padding-top: 4px;
+}
+.spl .price {
+    font-size: 1rem;
+}
+
+.text-field {
+    padding: 5px;
+    max-width: 100%;
+    background: var(--White);
+    margin: 0 10px 10px 10px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-field input[type="text"] {
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    display: block;
+}
+
+::placeholder {
+    font-size: 12px;
+    color: var(--Grayish-Blue);
+}
+
+.fa-angle-right {
+    color: white;
+    background: var(--Very-Dark-Desaturated-Violet);
+    padding: 5px 9px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Intro part */
+
+.intro {
+    margin-left: 110px;
+}
+
+.intro h1 {
+    color: var(--Very-Dark-Desaturated-Violet);
+    margin-bottom: 20px;
+}
+
+.intro p {
+    max-width: 450px;
+    line-height: 23px;
+    color: var(--Dark-Grayish-Violet);
+}
+
+
+/* Responsiveness */
+@media screen and (max-width: 375px) {
+    body {
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .mobile {
+        box-shadow: 0 15px 20px rgba(0,0,0,0.1);
+    }
+
+    body::before,
+    body::after {
+        width: 200px;
+        height: 500px;
+    }
+
+    body::after {
+        bottom: -240px;
+    }
+    
+    /* Intro part */
+
+    .intro {
+        margin: 90px 0 0 0;
+        text-align: center;
+    }
+
+    .intro p {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+} 

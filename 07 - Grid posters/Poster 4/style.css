@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #333;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: rgb(80, 154, 184);
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 50px 200px 200px 100px;
+    grid-gap: 7px;
+    border: 10px solid white;
+}
+
+.item-1 {
+    position: relative;
+}
+
+.item-1 .small-square {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: green;
+}
+
+.item-1, .item-6 {
+    grid-column: 1 / span 2;
+}
+
+.item-2, .item-5 {
+    background: green;
+}
+
+.item-3 {
+    background: black;
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+}
+
+.item-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 5px;
+}
+
+.inner-item-1,
+.inner-item-4 {
+    background: black;
+}
+
+.inner-item-3 {
+    background: green;
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.inner-item-2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+.inner-item-2 .one {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background: green;
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 2;
+}
+
+.small-black {
+    grid-column: 2 / span 1;
+    grid-row: 1 /span 1;
+    background: black;
+    border-left: 5px solid rgb(80, 154, 184);
+    border-bottom: 5px solid rgb(80, 154, 184);
+}
+
+.item-6 {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;;
+    font-weight: bold;
+}

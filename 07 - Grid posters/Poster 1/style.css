@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #bbb;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: rgb(210, 226, 61);
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(5, 100px) 35px;
+    grid-gap: 5px;
+    border: 13px solid white;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
+
+}
+
+.item {
+    background: rgb(98, 143, 7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.black {
+    background: black;
+}
+
+.item-1, .item-2, .item-3, .item-5{
+    background: transparent;
+}
+
+.item-1 .circle {
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    background: rgb(98, 143, 7);
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-right: 50px solid black;
+    border-bottom: 50px solid black;
+    border-top: 50px solid transparent;
+    border-left: 50px solid transparent;
+}
+
+.item-3 .triangle {
+    border-right: 50px solid rgb(98, 143, 7);
+    border-bottom: 50px solid rgb(98, 143, 7);
+}
+
+.item-19 {
+    grid-column: 3 / span 2;
+    grid-row: 5 / span 2;
+    background: transparent;
+}
+
+.item h1 {
+    color: rgb(210, 226, 61);
+    font-size: 6rem;
+    margin-bottom: 12px;
+}
+
+.item-19 {
+    padding: 10px;
+}
+
+.item-19 p {
+    font-weight: bold;
+    font-size: 12px;
+    text-align: right;
+}

@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap');
+
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    padding: 25px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--very-light-gray);
+}
+
+h1 {
+    color: #333;
+}
+
+.light {
+    font-weight: 200;
+}
+
+.dark {
+    margin-bottom: 15px;
+}
+
+.dark + p {
+    text-align: center;
+    max-width: 480px;
+    font-size: 15px;
+    color: var(--grayish-blue);
+    margin-bottom: 30px;
+}
+
+.grid {
+    max-width: 1180px;
+    display: grid;
+    grid-template-areas: 
+        '. team-builder .'
+        'supervisor team-builder calculator'
+        'supervisor karma calculator'
+        '. karma .';
+    grid-gap: 30px;
+    padding: 20px;
+}
+
+.grid div {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.1);
+}
+
+.grid div h3 {
+    padding-bottom: 10px;
+}
+
+.grid div p {
+    text-align: left;
+    font-size: 15px;
+    color: var(--grayish-blue);
+    margin-bottom: 30px;
+}
+
+.grid div img {
+    float: right;
+}
+
+.supervisor {
+    grid-area: supervisor;
+    border-top: 4px solid var(--cyan);
+}
+
+.team-builder {
+    grid-area: team-builder;
+    border-top: 4px solid var(--red);
+}
+
+.karma {
+    grid-area: karma;
+    border-top: 4px solid var(--orange);
+}
+
+.calculator {
+    grid-area: calculator;
+    border-top: 4px solid var(--blue);
+}
+
+footer p {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+}
+@media (max-width: 375px) {
+    body {
+        height: 100%;
+        padding: 60px 25px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .grid {
+        padding: 0;
+        margin-top: 40px;
+        grid-template-areas: 
+            'supervisor'
+            'team-builder'
+            'karma'
+            'calculator';
+    }
+
+    footer p {
+        display: none;
+    }
+}

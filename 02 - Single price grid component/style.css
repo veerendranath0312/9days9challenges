@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    --primary-color-1: hsl(179, 62%, 43%);
+    --primary-color-2: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Karla', sans-serif;
+    background: var(--light-gray);
+}
+
+.container {
+    max-width: 690px;
+    background: #ffffff;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        'heading heading'
+        'pricing why';
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.107);
+}
+
+.heading {
+    grid-area: heading;
+    padding: 40px;
+}
+
+.heading h2 {
+    font-size: 26px;
+    color: var(--primary-color-1);
+    margin-bottom: 25px;
+}
+
+.heading h3 {
+    color: var(--primary-color-2);
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.heading p {
+    color: #bbb;
+    font-weight: bold;
+    line-height: 27px;
+}
+
+.pricing {
+    grid-area: pricing;
+    padding: 40px;
+    color: #fff;
+    background: var(--primary-color-1);
+    border-bottom-left-radius: 10px;
+}
+
+.pricing h3{
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.pricing div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.pricing div .price {
+    font-size: 2.3rem;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.pricing div .month {
+    font-size: 17px;
+    font-weight: normal;
+    opacity: 0.6;
+}
+
+.pricing > p {
+    margin-bottom: 30px;
+}
+
+.pricing a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    background: var(--primary-color-2);
+    padding: 12px 0;
+    border-radius: 5px;
+    box-shadow: 0 12.5px 10px rgba(0, 0, 0, 0.035),
+                0 50px 90px rgba(0, 0, 0, 0.07);
+}
+.why {
+    grid-area: why;
+    padding: 40px;
+    color: white;
+    background: hsl(179, 70%, 47%);
+    border-bottom-right-radius: 10px;
+}
+
+.why h3 {
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.why ul {
+    list-style: none;
+    line-height: 21px;
+    font-weight: lighter;
+    opacity: 0.8;
+}
+
+footer p {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+}
+
+/* Responsiveness */
+
+@media (max-width: 375px) {
+    body {
+        height: 100%;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'heading'
+            'pricing'
+            'why';
+    }
+
+    .heading, .pricing, .why {
+        padding: 30px;
+    }
+
+    .heading {
+        grid-area: heading;
+    }
+
+    .heading h2 {
+        font-size: 24px;
+    }
+
+    .heading h3 {
+        font-size: 18px;
+    }
+
+    .pricing {
+        grid-area: pricing;
+        border-bottom-left-radius: 0px;
+    }
+    
+    .why {
+        grid-area: why;
+        border-bottom-left-radius: 10px;
+    }
+
+    footer p {
+        display: none;
+    }
+}

@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap');
+
+:root {
+    --pink : hsl(322, 100%, 66%);
+    --Very-Pale-Cyan: hsl(193, 100%, 96%);
+    --Very-Dark-Cyan: hsl(192, 100%, 9%);
+    --Grayish-Blue: hsl(208, 11%, 55%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* ----- Hero section ----- */
+.hero {
+    height: 100vh;
+    background-color: var(--Very-Pale-Cyan);
+    background-image: url('images/bg-hero-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar, .header {
+    width: 100%;
+    padding: 0 60px;
+}
+
+.navbar {
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    background: white;
+    padding: 8px 40px;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header {
+    height: 85%;
+    width: 100%;
+    display: flex;
+}
+
+.heading {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-right: 60px;
+}
+
+.heading h1 {
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+}
+
+.heading p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: var(--pink);
+    border-radius: 30px;
+    padding: 10px 40px;
+    font-weight: 14px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.image {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+}
+
+/* Alternating blocks section */
+
+.alter-blocks {
+    padding: 100px 60px 0 60px;
+}
+
+.block {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    /* border: 2px solid black; */
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 35px 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.block p {
+    font-size: 18px;
+    color: var(--Grayish-Blue);
+}
+
+.block h2 {
+    margin-bottom: 15px;
+}
+
+.left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 80px;
+
+}
+
+.right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block img {
+    width: 65%;
+    height: auto;
+}
+
+.community {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    background: white;
+    position: relative;
+}
+
+.community h2 {
+    margin-bottom: 20px;
+}
+
+
+/* Footer */
+footer {
+    color: white;
+    background: var(--Very-Dark-Cyan);
+    padding: 60px;
+    padding-top: 150px;
+    margin-top: -75px;
+    display: flex;
+    justify-content: center;
+}
+
+footer .boxes {
+    width: 30%;
+    padding: 30px;
+    display: flex;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+}
+.location,
+.call,
+.mail {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.location img,
+.call img,
+.mail img {
+    object-fit: none;
+    margin-right: 15px;
+    padding-top: 5px;
+}
+
+.know-more {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.know-more ul {
+    list-style: none;
+}
+
+.know-more ul li {
+    margin-bottom: 15px;
+}
+
+.social {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.icons {
+    display: flex;
+}
+
+.icons .icon {
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsiveness */
+
+@media (max-width: 500px) {
+    /* ----- Hero section ----- */
+    .hero {
+        background-image: url('images/bg-hero-mobile.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .navbar, .header {
+        width: 100%;
+        padding: 0 20px;
+    }
+    
+    .navbar {
+        height: 10%;
+        /* justify-content: space-between; */
+    }
+
+    .navbar img {
+        width: 110px;
+    }
+
+    .navbar a {
+        padding: 4px 20px;
+    }
+    
+    .header {
+        height: 90%;
+        flex-direction: column;
+    }
+
+    .heading {
+        width: 100%;
+        align-items: center;
+        padding-top: 50px;
+        padding-right: 0;
+        text-align: center;
+        margin-bottom: 13px;
+    }
+  
+    .heading h1 {
+        font-size: 1.6rem;
+    }
+    
+    .heading p {
+        font-size: 18px;
+    }
+
+    .image {
+        width: 100%;
+        height: 50%;
+        justify-content: center;
+    }
+
+    /* Alternatin blocks */
+
+    .alter-blocks {
+        padding: 100px 20px 0 20px;
+    }
+    
+    .block {
+        flex-direction: column-reverse;
+    }
+    
+        
+    .left {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        padding: 60px 10px 20px 10px;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .block img {
+        width: 100%;
+    }
+
+    .block p {
+        font-size: 16px;
+    }
+    
+    .community h2 {
+        font-size: 16px;
+        font-weight: bold;
+    } 
+
+    /* Footer */
+
+    footer {
+        padding: 10px;
+        padding-top: 150px;
+        margin-top: -65px;
+        flex-direction: column;
+    }
+    
+    footer .boxes {
+        width: 100%;
+    }
+
+    .know-more {
+        flex-direction: column;
+    }
+
+    .icons {
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .copy {
+        font-size: 14px;
+    }
+
+}
+

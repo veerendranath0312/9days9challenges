@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+:root {
+    --Strong-Cyan: hsl(171, 66%, 44%);
+    --Light-Blue: hsl(233, 100%, 69%);
+    --Dark-Grayish-Blue: hsl(210, 10%, 33%);
+    --Grayish-Blue: hsl(201, 11%, 66%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bai Jamjuree', sans-serif;
+    background: white;
+}
+
+/* -------- hero section --------- */
+
+.hero {
+    background-image: url(img/bg-header-desktop.png);
+    background-repeat: no-repeat;
+    background-size: 100% 55%;
+    background-position: top;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.hero .logo {
+    margin-bottom: 45px;
+}
+
+.hero .main-heading {
+    color: var(--Dark-Grayish-Blue);
+    font-size: 2.3rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 590px;
+    font-size: 17px;
+    text-align: center;
+    color: var(--Grayish-Blue);
+    margin-bottom: 35px;
+}
+
+.ios-btn, .mac-btn {
+    display: inline-block;
+    padding: 11px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    margin: 0 5px;
+}
+
+.ios-btn {
+    background: var(--Strong-Cyan);
+    box-shadow: 0 2px 0 hsl(171, 65%, 34%);
+}
+
+.mac-btn {
+    background: var(--Light-Blue);
+    box-shadow: 0 2px 0 hsl(233, 51%, 53%);
+}
+
+
+/* -------- tracking section --------- */
+
+h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    color: var(--Dark-Grayish-Blue);
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    color: var(--Grayish-Blue);
+    max-width: 610px;
+    margin: auto;
+}
+
+.tracking > div {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 60px 0;
+    /* background: mistyrose; */
+}
+
+.image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    width: 90%;
+    height: 90%;
+}
+
+.tracking > div .specs {
+    padding: 60px 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.spec {
+    width: 380px;
+    margin-bottom: 40px;
+}
+
+.spec h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+.spec p {
+    text-align: left;
+    font-size: 18px;
+}
+
+/* -------- Access section --------- */
+
+.access {
+    padding-top: 30px;
+}
+
+.access .image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0 50px;
+}
+
+.access .image img {
+    width: 50%;
+    height: 50%;
+}
+
+/* -------- workflow section --------- */
+
+.workflow .items {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.workflow .items .item {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.workflow .items .item .icon {
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.workflow .items .item .description {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.workflow .items .item-1 h3{
+    margin-bottom: 17px;
+}
+
+
+/* ----- partners section ----- */
+
+.partners {
+    padding: 90px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* download section */
+
+.download {
+    padding: 40px 0 50px;
+}
+
+.download-btns {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+/* ----- footer ------ */
+footer {
+    background: #efefef;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-logo,
+.footer-specs,
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 20%;
+
+}
+
+.footer-logo img {
+    width: 16%;
+    height: 81%;
+}
+
+.footer-specs {
+    width: 50%;
+    flex-wrap: wrap;
+}
+
+.footer-specs p {
+    font-size: 18px;
+}
+
+.social-media {
+    width: 30%;
+    justify-content: space-evenly;
+}
+
+/* Responsiveness */
+
+@media (max-width: 375px) {
+    .hero {
+        background-image: url(img/bg-header-mobile.png);
+        background-repeat: no-repeat;
+        background-size: 100% 55%;
+        background-position: top;
+        padding: 100px 20px;
+        text-align: center;
+    }
+    
+    .hero .main-heading {
+        font-size: 2rem;
+    }
+
+    .ios-btn, .mac-btn {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* -------- tracking section --------- */
+
+    .tracking {
+        padding: 0 20px;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    .tracking > div {
+       flex-direction: column;
+    }
+
+    .image {
+        width: 100%;
+    }
+
+    .tracking > div .specs {
+        width: 100%;
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .spec {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .spec p {
+        text-align: center;
+    }
+
+    /* -------- Access section --------- */
+
+    .access {
+        padding: 0 20px;
+    }
+
+    .access .image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* -------- workflow section --------- */
+
+    .workflow {
+        padding: 20px 20px 0 20px;
+    }
+
+    .workflow .items .item:not(:last-child) {
+        margin-bottom: 40px;
+    }
+
+    /* ----- partners section ----- */
+
+    .partners {
+        flex-direction: column;
+    }
+
+    .partner:not(:last-child) {
+        margin-bottom: 60px;
+    }
+
+    /* download section */
+
+    .download {
+        padding: 40px 30px 50px 30px;
+    }
+
+    /* ----- footer ------ */
+    footer {
+        padding-top: 50px;
+        flex-direction: column;
+    }
+
+    .footer-logo {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .footer-specs {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .footer-specs p {
+        margin: 15px 0;
+    }
+
+    .social-media {
+        width: 100%;
+        padding: 20px 0;
+    }
+
+}
